@@ -20,7 +20,7 @@ class Icon extends Component {
         }
         return (
                 <View style={iconStyle}>
-                    {checkmark ? <Image resizeMode="contain" style={style.checkIcon} source={require('./images/check.png')}></Image> : null}
+                    {checkmark ? <Image resizeMode="contain" style={style.iconCheck} source={require('./images/check.png')}></Image> : null}
                 </View>
             );
     }

@@ -10,7 +10,7 @@ class CurrencyList extends Component {
         this.state = {};
     }
     handlePressItem = () => {
-           
+        this.props.navigation.goBack(null)
     }
     render() {
         return (

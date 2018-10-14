@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { ScrollView, StatusBar,Image } from 'react-native';
-
+import { ScrollView, StatusBar,Image,Linking } from 'react-native';
+import {connectAlert} from '../components/Alert'
 
 import { ListItem, Separator } from '../components/List'
 class Options extends Component {
@@ -9,10 +9,11 @@ class Options extends Component {
         this.state = {};
     }
     handlePressTheme = () => {
-        console.log('pree theme')
+     
+      this.props.navigation.navigate('Themes');
     }
     handlePressSite = () => {
-        console.log('pree site')
+        Linking.openURL('http://jobboard.vn')
     }
     render() {
         return (
@@ -27,7 +28,7 @@ class Options extends Component {
                 </ListItem>
                 <Separator></Separator>
                 <ListItem
-                text="Fixer.IO"
+                text="Jobboard.vn"
                 customIcon={<Image style={{ width:30,height:30, }} source={require('../data/5.png')}></Image>}
                 onPress={this.handlePressSite}
                 >
@@ -37,4 +38,4 @@ class Options extends Component {
     }
 }
 
-export default Options;
+export default connectAlert(Options);

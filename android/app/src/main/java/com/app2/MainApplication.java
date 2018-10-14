@@ -1,4 +1,4 @@
-package com.convertrate;
+package com.app2;
 
 import android.app.Application;
 

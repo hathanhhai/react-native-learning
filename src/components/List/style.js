@@ -31,7 +31,7 @@ export default EStyleSheet.create({
         backgroundColor: '$primaryBlue'
     }
     , iconCheck: {
-        width: 20, height: 20
+        width: 15, height: 15
     }
 
 })

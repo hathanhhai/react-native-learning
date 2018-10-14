@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 
 import EStyleSheet from 'react-native-extended-stylesheet';
+import { Provider } from 'react-redux';
+import store from './config/store';
 
 import Navigator from './config/routes'
-
+import { AlertProvider } from './components/Alert/'
 EStyleSheet.build({
     $primaryBlue: '#4F6D7A',
     $primaryOrange: '#D57A66',
@@ -28,4 +30,9 @@ YellowBox.ignoreWarnings([
 
 ]);
 
-export default () => <Navigator></Navigator>
+export default () =>
+    <Provider store={store}>
+        <AlertProvider>
+            <Navigator onNavigationStateChange={null}></Navigator>
+        </AlertProvider>
+    </Provider>
